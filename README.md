@@ -11,8 +11,8 @@ It uses their dataset for initial training, in the future I will phase in data f
 
 Kite AI is an idea to create a universal tool to protect against online harassment
 and cyberbullying. Initially, it began as a hackathon project at [HackGSU 2017](http://hackgsu.com)
-where it won the Hack Harassment reward. From then, Justin Potts (@justinpotts), Alex Meza (@the-alexmeza)
-and Trevor "Thai" Nguyen (@trevortknguyen) continued development, and became a startup company.
+where it won the Hack Harassment reward. From then, Justin Potts([@justinpotts](https://github.com/justinpotts)), Alex Meza ([@the-alexmeza](https://github.com/the-alexmeza)),
+and Trevor "Thai" Nguyen ([@trevortknguyen](https://github.com/trevortknguyen)) continued development, and became a startup company.
 
 After one year, it was decided that the optimal route to continue would be to open source the project
 to allow for other contribution. Cyberbullying and online harassment are global problems, so it
