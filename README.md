@@ -56,6 +56,7 @@ Any questions or comments can be sent to be at alex@mezainnovations.com.
 - Upload `test.csv` upon model generation.
 - Add to Issues tab.
 - Add PR/Issues template.
+- Lower memory requirement for `split_data.py`
 
 ---
 
