@@ -4,10 +4,10 @@ from keras.layers import Dense, Activation, Dropout, Input, LSTM
 import pickle as pkl
 from preprocess import make_sparse_array
 
-train_data = pkl.load(open('train_samples.p', 'rb'))
-train_labels = pkl.load(open('train_labels.p', 'rb'))
-test_data = pkl.load(open('test_samples.p', 'rb'))
-test_labels = pkl.load(open('test_labels.p', 'rb'))
+train_data = pkl.load(open('data/train_samples.p', 'rb'))
+train_labels = pkl.load(open('data/train_labels.p', 'rb'))
+test_data = pkl.load(open('data/test_samples.p', 'rb'))
+test_labels = pkl.load(open('data/test_labels.p', 'rb'))
 
 model = Sequential()
 
@@ -24,7 +24,5 @@ model.fit(train_data, train_labels, epochs=10)
 print()
 score = model.evaluate(test_data, test_labels)
 
-prediction = model.predict(pad_predict('kablamo'))
+prediction = model.predict(make_sparse_array('kablamo'))
 print("Pred: ", prediction)
-#print(model.predict(pad_predict('xxhotdogxx')))
-#print(model.predict(pad_predict('doghot')))

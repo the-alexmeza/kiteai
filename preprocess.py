@@ -1,20 +1,3 @@
-'''
-To improve accuracy, it is absolutely imperative that we eliminate as many
-preprocessing errors as possible.
-
-The tasks that need to be performed are:
-    * URL removal
-    * Email removal
-    * Lowercasing
-    * Nltk word_tokenize
-    * Remove punctuation
-
-In future or needing higher accuracy:
-    * Stemming or Lemmatization
-
-IMPORTANT: Each sparse matrix is NOT [word, position]. It is:
-[# of sentence, (dictionary with words embedded)]
-'''
 import os
 import string
 import re
@@ -35,7 +18,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 # Create globals
 table = str.maketrans({ch: " " for ch in string.punctuation})
 lemma = WordNetLemmatizer()
-vectorizer = pickle.load(open('vectorizer.p', 'rb'))
+vectorizer = pickle.load(open('data/vectorizer.p', 'rb'))
 max_words = 100
 feature_number = 7000
 stop_words = set(stopwords.words('english'))
@@ -104,7 +87,7 @@ def make_vectorizer(raw_docs):
     count_train = vectorizer.fit(raw_docs)
     print(str(vectorizer.vocabulary_))
     print(str(len(vectorizer.vocabulary_)))
-    with open('vectorizer.p', 'wb') as vectorizer_file:
+    with open('data/vectorizer.p', 'wb') as vectorizer_file:
         pickle.dump(count_train, vectorizer_file)
     print('Vectorizer created and saved.')
 

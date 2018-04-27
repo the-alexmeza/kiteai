@@ -34,5 +34,5 @@ for sentence in all_text:
 vocab = nltk.FreqDist(all_tokens)
 most_common_vocab = [word for word,_ in vocab.most_common(vocab_size)]
 print(most_common_vocab)
-pkl.dump(most_common_vocab, open('vocab.p', 'wb'))
-pkl.dump(all_text, open('corpus.p', 'wb'))
+pkl.dump(most_common_vocab, open('data/vocab.p', 'wb'))
+pkl.dump(all_text, open('data/corpus.p', 'wb'))

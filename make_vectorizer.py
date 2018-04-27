@@ -4,7 +4,7 @@ from preprocess import make_vectorizer, preprocess
 
 def main():
     main_list = []
-    raw_text = pkl.load(open('corpus.p', 'rb'))
+    raw_text = pkl.load(open('data/corpus.p', 'rb'))
     for i in range(len(raw_text)):
         tmp_list = preprocess(raw_text[i])
         main_list.append(tmp_list)
