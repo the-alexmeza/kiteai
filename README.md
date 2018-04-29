@@ -27,6 +27,16 @@ This repository is **not** API-ready. `train_model.py` is not set up, and is bas
 
 ---
 
+### Setup Environment
+
+Python version 3.6.1
+
+`while read requirement; do conda install --yes $requirement; done < requirements.txt`
+
+[Source](https://www.technologyscout.net/2017/11/how-to-install-dependencies-from-a-requirements-txt-file-with-conda/)
+
+---
+
 ### File Explanation
 
 - `make_dict.py` : Generates vocabulary (7000 words), makes files `data/vocab.p` and `data/corpus.p`.
@@ -51,7 +61,6 @@ Any questions or comments can be sent to be at alex@mezainnovations.com.
 ---
 ### Todo
 
-- Provide requirements.txt
 - Complete prototype `train_model.py`.
 - Upload `test.csv` upon model generation.
 - Add to Issues tab.
