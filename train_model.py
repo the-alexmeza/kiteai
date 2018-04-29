@@ -1,6 +1,5 @@
 import keras
-from keras.models import Sequential
-from keras.layers import Dense, Activation, Dropout, Input, LSTM
+from keras.layers import Input, Dense, Activation, Dropout
 import pickle as pkl
 from preprocess import make_sparse_array
 

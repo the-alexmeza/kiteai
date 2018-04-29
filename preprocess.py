@@ -60,7 +60,7 @@ def preprocess(sentence):
     removed_punctuation = remove_punctuation(sentence.lower())
     sentence_to_tokens = make_tokens(removed_punctuation)
     lemma_token_list = lemmatized_tokens(sentence_to_tokens)
-    most_common_vocab = pkl.load(open('vocab.p', 'rb'))
+    most_common_vocab = pkl.load(open('data/vocab.p', 'rb'))
     mapping = defaultdict(lambda: 'UNK')
     for word in most_common_vocab:
         mapping[word] = word
