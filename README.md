@@ -31,9 +31,7 @@ This repository is **not** API-ready. `train_model.py` is not set up, and is bas
 
 Python version 3.6.1
 
-`while read requirement; do conda install --yes $requirement; done < requirements.txt`
-
-[Source](https://www.technologyscout.net/2017/11/how-to-install-dependencies-from-a-requirements-txt-file-with-conda/)
+`conda env create -f kite.yml`
 
 ---
 
