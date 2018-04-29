@@ -33,6 +33,9 @@ Python version 3.6.1
 
 `conda env create -f kite.yml`
 
+**NOTE:**
+If not on OS X, delete appnope from kite.yml. Otherwise it will fail to create the environment.
+
 ---
 
 ### File Explanation
