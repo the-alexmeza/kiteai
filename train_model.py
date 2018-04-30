@@ -1,14 +1,25 @@
 import keras
 from keras.layers import Input, Dense, Activation, Dropout
 import pickle as pkl
-from preprocess import make_sparse_array
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from create_empty_db import Base, Comment
 
-train_data = pkl.load(open('data/train_samples.p', 'rb'))
-train_labels = pkl.load(open('data/train_labels.p', 'rb'))
-test_data = pkl.load(open('data/test_samples.p', 'rb'))
-test_labels = pkl.load(open('data/test_labels.p', 'rb'))
+path = 'data/train.db'
+engine = create_engine('sqlite:///'+path)
+Base.metadata.bind = engine
 
-model = Sequential()
+DBSession = sessionmaker(bind=engine)
+session = DBSession()
+
+last_id = 0
+
+
+def LoadTrainBatch(batch_size):
+    for item in session.query(Comment).\
+            filter(item('id>last_id and id<='+last_id+batch_size)).all():
+        print(text.id)
+    return samples, labels
 
 model.add(Dense(67, input_dim=15))
 model.add(Dense(1))
