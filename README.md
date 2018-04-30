@@ -31,7 +31,8 @@ This repository is **not** API-ready. `train_model.py` is not set up, and is bas
 
 Python version 3.6.1
 
-`conda env create -f kite.yml`
+`conda env create -f kite.yml` for Mac
+`conda env create -f kitex.yml` for Linux
 
 **NOTE:**
 If not on OS X, delete appnope from kite.yml. Otherwise it will fail to create the environment.
